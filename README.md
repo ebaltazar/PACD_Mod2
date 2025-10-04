@@ -37,6 +37,12 @@ venv_aereos\Scripts\activate #En Windows
 
 # Instalar dependencias
 pip install -r requirements.txt
+
+# Instalar también las siguientes herramientas
+pip install sqlalchemy pymysql python-dotenv
+pip install plotly
+pip install nbformat
+
 ```
 
-Una vez realizado los comandos, se deberá descargar el dataset en la carpeta datos del proyecto.
+Una vez realizados los comandos, se deberá descargar el dataset en la carpeta datos del proyecto.
