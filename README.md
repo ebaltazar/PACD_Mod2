@@ -15,34 +15,34 @@ https://datos.gob.ar/dataset/turismo-conectividad-aerea/archivo/turismo_aab49234
 
 ## Motor de base de datos
 MySQL Workbench 8.0 (Cliente)
+https://dev.mysql.com/downloads/workbench/?os=33 (usuario root)
 
 XAMPP 3.0 (Servidor)
+https://www.apachefriends.org/es/download.html (se debe activar módulo MySQL)
 
-## Pasos para ejecutar notebook
+## Pasos para ejecutar notebook en Visual Studio Code + Jupyter
 
 ### Instalación
 
 ```bash
-# Clonar el repositorio
+# Para abrir la terminal en VS Code, presionar Ctrl + ñ (ó + ')
+
+#1. Clonar el repositorio
 git clone https://github.com/ebaltazar/PACD_Mod2.git
 
-# Entrar al directorio
-cd "C:\tusuario\PACD_Mod2"
+#2. Entrar al directorio del proyecto
+cd "C:\tusuario\..\PACD_Mod2"
 
-# Crear entorno virtual (ubicar en la carpeta del proyecto)
+#3. Crear entorno virtual (lo nombraremos venv_aereos)
 py -m venv venv_aereos
 
-# No olvidar ACTIVAR el venv del proyecto.
-venv_aereos\Scripts\activate #En Windows
+#4. No olvidar ACTIVAR el venv del proyecto.
+venv_aereos\Scripts\activate    #En Windows, para desactivarlo: deactivate
 
-# Instalar dependencias
-pip install -r requirements.txt
+#5. Instalar dependencias
+pip install -r requirements_vscode.txt
 
-# Instalar también las siguientes herramientas
-pip install sqlalchemy pymysql python-dotenv
-pip install plotly
-pip install nbformat
+#6. Una vez abierta en la notebook, seleccionar el kernel venv_aereos(3.12.2) y ejecutarla
+# Antes de hacerlo, se deberá descargar el dataset completo en la carpeta datos del proyecto.
 
 ```
-
-Una vez realizados los comandos, se deberá descargar el dataset en la carpeta datos del proyecto.
